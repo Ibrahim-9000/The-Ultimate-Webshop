@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SuperCar Vault — Supercars te koop</title>
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/frontend.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <a class="brand" href="index.html" aria-label="SuperCar Vault home">
+        <img src="afbeeldingen/logo-supercar.png" alt="SuperCar Vault logo" />
+        <span>SuperCar Vault</span>
+      </a>
+
+      <nav aria-label="Hoofdnavigatie">
+        <ul>
+          <li><a href="#collectie">Collectie</a></li>
+          <li><a href="#waarom">Waarom ons?</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="admin/login.html">Admin</a></li>
+        </ul>
+      </nav>
+
+      <div class="cta">
+        <span class="pill">Premium selectie • Direct leverbaar</span>
+        <a class="btn btn--brand" href="#collectie">Bekijk voorraad</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero__grid">
+        <div class="hero__left">
+          <div class="hero__card">
+            <div class="kicker">Jouw droomauto, zonder gedoe</div>
+            <h1>Supercars.<br>Hypercars.<br>Iconen.</h1>
+            <p class="lead">
+              Welkom bij <b>SuperCar Vault</b> — een webshop waar je exclusieve wagens ontdekt, vergelijkt en (in een echte shop)
+              kan bestellen. Dit project is gemaakt met enkel HTML &amp; CSS.
+            </p>
+
+            <div class="hero__stats" aria-label="Korte voordelen">
+              <div class="stat"><b>6+</b><span>Topmodellen in stock</span></div>
+              <div class="stat"><b>100%</b><span>Transparante prijzen</span></div>
+              <div class="stat"><b>Flex</b><span>Responsive design</span></div>
+            </div>
+
+            <div class="detail__buy" style="margin-top:16px">
+              <a class="btn btn--brand" href="#collectie">Shop nu</a>
+              <a class="btn" href="#waarom">Hoe werkt het?</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__right">
+          <div class="hero__card hero__image">
+            <img src="afbeeldingen/bmw-m4-f82.jpg" alt="Sfeershot van een supercar" />
+            <div class="hero__overlay" aria-hidden="true"></div>
+            <div class="hero__badge">
+              <span class="chip">Vandaag geleverd? Check beschikbaarheid.</span>
+              <span class="chip">Labels: Nieuw • Sale • Limited</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="collectie">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <h2>Collectie</h2>
+            <p>Minimaal 6 producten in cards, met afbeelding, naam, prijs, label en een link naar een detailpagina.</p>
+          </div>
+          <a class="btn" href="#contact" title="Contacteer ons">Vraag een offerte</a>
+        </div>
+
+        <div class="grid" aria-label="Productoverzicht">
+
+          <article class="card">
+            <div class="card__media">
+              <img src="afbeeldingen/bmw-m4-f82.jpg" alt="BMW M4 F82" />
+              <span class="tag tag--sale">Sale</span>
+            </div>
+            <div class="card__body">
+              <div class="price">
+                <b>BMW M4 F82</b>
+                <span>€ 62.900</span>
+              </div>
+              <p>Pure RWD fun met iconische lijnen en een agressieve sound.</p>
+              <div class="card__actions">
+                <a class="link link--brand" href="producten/bmw-m4-f82.html">Bekijk details</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card__media">
+              <img src="afbeeldingen/bmw-m4.jpg" alt="BMW M4 (G82)" />
+              <span class="tag tag--new">Nieuw</span>
+            </div>
+            <div class="card__body">
+              <div class="price">
+                <b>BMW M4 (G82)</b>
+                <span>€ 89.500</span>
+              </div>
+              <p>Nieuwste M4 met scherpe handling en moderne tech.</p>
+              <div class="card__actions">
+                <a class="link link--brand" href="producten/bmw-m4.html">Bekijk details</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card__media">
+              <img src="afbeeldingen/ferrari-laferrari.jpg" alt="Ferrari LaFerrari" />
+              <span class="tag tag--limited">Limited</span>
+            </div>
+            <div class="card__body">
+              <div class="price">
+                <b>Ferrari LaFerrari</b>
+                <span>€ 3.450.000</span>
+              </div>
+              <p>Hybride hypercar met F1-DNA en zeldzame exclusiviteit.</p>
+              <div class="card__actions">
+                <a class="link link--brand" href="producten/ferrari-laferrari.html">Bekijk details</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card__media">
+              <img src="afbeeldingen/lamborghini-aventador.jpg" alt="Lamborghini Aventador" />
+              <span class="tag tag--new">Nieuw</span>
+            </div>
+            <div class="card__body">
+              <div class="price">
+                <b>Lamborghini Aventador</b>
+                <span>€ 389.000</span>
+              </div>
+              <p>V12 drama, schaar-deuren en een design dat iedereen laat kijken.</p>
+              <div class="card__actions">
+                <a class="link link--brand" href="producten/lamborghini-aventador.html">Bekijk details</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card__media">
+              <img src="afbeeldingen/mercedes-amg-gt.jpg" alt="Mercedes‑AMG GT" />
+              <span class="tag tag--sale">Sale</span>
+            </div>
+            <div class="card__body">
+              <div class="price">
+                <b>Mercedes‑AMG GT</b>
+                <span>€ 149.900</span>
+              </div>
+              <p>Front‑mid V8 met brute grip en luxe interieur.</p>
+              <div class="card__actions">
+                <a class="link link--brand" href="producten/mercedes-amg-gt.html">Bekijk details</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card__media">
+              <img src="afbeeldingen/mercedes-g-klasse.jpg" alt="Mercedes‑Benz G‑Klasse" />
+              <span class="tag tag--limited">Limited</span>
+            </div>
+            <div class="card__body">
+              <div class="price">
+                <b>Mercedes‑Benz G‑Klasse</b>
+                <span>€ 179.000</span>
+              </div>
+              <p>Iconische 4x4 met luxestatus — gebouwd als een tank.</p>
+              <div class="card__actions">
+                <a class="link link--brand" href="producten/mercedes-g-klasse.html">Bekijk details</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="waarom">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <h2>Waarom SuperCar Vault?</h2>
+            <p>Extra blok naar keuze: korte USP’s (unique selling points) om de identiteit van de shop te tonen.</p>
+          </div>
+        </div>
+
+        <div class="features">
+          <div class="feature">
+            <h3>Geverifieerde voorraad</h3>
+            <p>Elk voertuig krijgt een duidelijke voorraadstatus en transparante prijsinformatie.</p>
+          </div>
+          <div class="feature">
+            <h3>Detailpagina’s</h3>
+            <p>Specificaties, reviews en gerelateerde producten zodat het “echt” aanvoelt.</p>
+          </div>
+          <div class="feature">
+            <h3>Mobile first</h3>
+            <p>Breakpoints op <b>860px</b> en <b>520px</b> voor een nette mobiele ervaring.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact">
+    <div class="container footer__grid">
+      <div>
+        <h4>SuperCar Vault</h4>
+        <p>Schoolproject Static Web — enkel HTML &amp; CSS.</p>
+        <p class="muted">© 2026 • Dummy webshop (geen echte verkoop)</p>
+      </div>
+
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li>Email: info@supercarvault.example</li>
+          <li>Tel: +32 470 00 00 00</li>
+          <li>Showroom: Antwerpen (fictief)</li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Links</h4>
+        <ul>
+          <li><a href="admin/login.html">Admin login</a></li>
+          <li><a href="#collectie">Collectie</a></li>
+          <li><a href="#waarom">Waarom ons?</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
