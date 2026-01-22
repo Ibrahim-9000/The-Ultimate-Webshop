@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Product toevoegen — SuperCar Vault</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="admin.css" />
+</head>
+<body>
+  <main class="container">
+    <div class="card">
+      <h1>Product toevoegen</h1>
+
+      <form action="dashboard.html">
+        <label for="name">Naam</label>
+        <input id="name" type="text" placeholder="bv. Porsche 911" required>
+
+        <label for="price">Prijs</label>
+        <input id="price" type="text" placeholder="bv. € 199.000" required>
+
+        <label for="label">Label</label>
+        <select id="label" required>
+          <option value="">Kies…</option>
+          <option>Nieuw</option>
+          <option>Sale</option>
+          <option>Limited</option>
+        </select>
+
+        <label for="img">Afbeelding (bestandsnaam)</label>
+        <input id="img" type="text" placeholder="bv. porsche-911.jpg" required>
+
+        <button class="btn btn--brand" type="submit">Opslaan</button>
+        <a class="btn" href="dashboard.html" style="margin-left:10px">Annuleren</a>
+      </form>
+    </div>
+  </main>
+</body>
+</html>
