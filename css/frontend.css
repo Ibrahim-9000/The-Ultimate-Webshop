@@ -1,20 +1,34 @@
+/* =========================================
+   SuperCar Vault — Frontend CSS
+   Doel: styling voor homepagina + detailpagina’s
+   Opbouw: variabelen → basis → header → hero → cards → detail → footer → responsive
+   Layout: Flexbox + responsive media queries
+   ========================================= */
+
 :root{
+  /* Kleuren & basis theme */
   --bg:#0b0f14;
   --surface:#111826;
   --surface-2:#0f1724;
   --text:#e7eefc;
   --muted:#a9b6cf;
+
+  /* Accent kleuren */
   --brand:#f7b733;
   --brand-2:#4ab0ff;
   --danger:#ff4d4d;
   --ok:#42d392;
+
+  /* Design tokens */
   --radius:18px;
   --shadow: 0 12px 40px rgba(0,0,0,.35);
   --max:1120px;
 }
 
+/* ===== Reset / basis regels ===== */
 *{box-sizing:border-box}
 html,body{height:100%}
+
 body{
   margin:0;
   font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
@@ -28,8 +42,10 @@ body{
 a{color:inherit; text-decoration:none}
 img{max-width:100%; display:block}
 
+/* Container om content netjes te centreren */
 .container{width:min(var(--max), 92vw); margin-inline:auto}
 
+/* ===== Header / navigatie (topbar) ===== */
 .topbar{
   position:sticky; top:0; z-index:20;
   backdrop-filter: blur(10px);
@@ -48,6 +64,7 @@ img{max-width:100%; display:block}
   font-size:28px;
 }
 .brand img{width:36px; height:36px; border-radius:10px}
+
 nav ul{display:flex; gap:14px; list-style:none; padding:0; margin:0; flex-wrap:wrap}
 nav a{
   padding:10px 12px;
@@ -57,9 +74,13 @@ nav a{
   background: rgba(255,255,255,.02);
 }
 nav a:hover{color:var(--text); border-color: rgba(255,255,255,.22)}
+
+/* Kleine call-to-action blok rechts in de header */
 .cta{
   display:flex; gap:10px; align-items:center; flex-wrap:wrap;
 }
+
+/* ===== Buttons / labels ===== */
 .btn{
   display:inline-flex; align-items:center; justify-content:center;
   padding:10px 14px;
@@ -77,6 +98,7 @@ nav a:hover{color:var(--text); border-color: rgba(255,255,255,.22)}
 }
 .btn:hover{transform: translateY(-1px)}
 .btn:active{transform: translateY(0)}
+
 .pill{
   font-size:12px;
   padding:6px 10px;
@@ -87,6 +109,7 @@ nav a:hover{color:var(--text); border-color: rgba(255,255,255,.22)}
   white-space:nowrap;
 }
 
+/* ===== Hero sectie (bovenaan home) ===== */
 .hero{
   padding:28px 0 18px;
 }
@@ -94,11 +117,13 @@ nav a:hover{color:var(--text); border-color: rgba(255,255,255,.22)}
   display:flex; gap:18px; align-items:stretch;
 }
 
+/* Links tekst / rechts afbeelding */
 .hero__left, .hero__right{
   flex:1;
   display:flex;
 }
 
+/* Algemene card-styling in hero */
 .hero__card{
   flex:1;
   border-radius: var(--radius);
@@ -107,10 +132,15 @@ nav a:hover{color:var(--text); border-color: rgba(255,255,255,.22)}
   box-shadow: var(--shadow);
   overflow:hidden;
 }
-
 .hero__left .hero__card{padding:22px}
 
-.kicker{color:var(--brand); font-weight:700; letter-spacing:.3px; text-transform:uppercase; font-size:12px}
+.kicker{
+  color:var(--brand);
+  font-weight:700;
+  letter-spacing:.3px;
+  text-transform:uppercase;
+  font-size:12px
+}
 
 h1{
   font-family:"Bebas Neue", system-ui, sans-serif;
@@ -122,8 +152,8 @@ h1{
 
 .lead{color:var(--muted); max-width:55ch; margin:0 0 16px}
 
+/* Kleine stats blokjes onder hero tekst */
 .hero__stats{display:flex; gap:10px; flex-wrap:wrap}
-
 .stat{
   flex:1 1 150px;
   padding:12px 14px;
@@ -131,15 +161,13 @@ h1{
   background: rgba(17,24,38,.45);
   border:1px solid rgba(255,255,255,.10);
 }
-
 .stat b{display:block; font-family:"Bebas Neue"; font-size:22px; letter-spacing:.6px}
 .stat span{color:var(--muted); font-size:13px}
 
-
+/* Rechter hero card (afbeelding) */
 .hero__right{
   margin-top: 0;
 }
-
 
 .hero__image{
   position:relative;
@@ -147,7 +175,6 @@ h1{
   height:100%;
   min-height:310px;
 }
-
 .hero__image img{
   width:100%;
   height:100%;
@@ -156,16 +183,15 @@ h1{
   transform: scale(1.02);
 }
 
+/* Overlay + badges op hero afbeelding */
 .hero__overlay{
   position:absolute; inset:0;
   background: linear-gradient(90deg, rgba(11,15,20,.86), rgba(11,15,20,.15) 60%, rgba(11,15,20,.75));
 }
-
 .hero__badge{
   position:absolute; left:16px; bottom:16px;
   display:flex; align-items:center; gap:10px; flex-wrap:wrap;
 }
-
 .chip{
   padding:8px 10px;
   border-radius:999px;
@@ -176,6 +202,7 @@ h1{
   backdrop-filter: blur(10px);
 }
 
+/* ===== Sections (Collectie / Waarom) ===== */
 .section{padding:22px 0}
 
 .section__head{
@@ -190,9 +217,9 @@ h2{
   font-size:34px;
   letter-spacing:.7px;
 }
-
 .section__head p{margin:0; color:var(--muted); max-width:70ch}
 
+/* ===== Collectie grid + cards ===== */
 .grid{
   display:flex;
   flex-wrap:wrap;
@@ -211,22 +238,22 @@ h2{
   flex-direction:column;
 }
 
+/* Afbeelding bovenaan product card */
 .card__media{
   position:relative;
   height:180px;
   overflow:hidden;
   background: #0a0e14;
 }
-
 .card__media img{
   width:100%;
   height:100%;
   object-fit:cover;
   transition: transform .35s ease;
 }
-
 .card:hover .card__media img{transform: scale(1.05)}
 
+/* Label (nieuw/sale/limited) op card */
 .tag{
   position:absolute;
   left:12px; top:12px;
@@ -239,11 +266,11 @@ h2{
   background: rgba(0,0,0,.35);
   backdrop-filter: blur(8px);
 }
-
 .tag--sale{background: rgba(255,77,77,.16); border-color: rgba(255,77,77,.32)}
 .tag--new{background: rgba(74,176,255,.16); border-color: rgba(74,176,255,.32)}
 .tag--limited{background: rgba(247,183,51,.16); border-color: rgba(247,183,51,.32)}
 
+/* Inhoud van product card */
 .card__body{
   padding:14px 14px 16px;
   display:flex;
@@ -251,7 +278,6 @@ h2{
   gap:8px;
   flex:1;
 }
-
 .price{display:flex; align-items:baseline; justify-content:space-between; gap:10px}
 .price b{font-size:18px}
 .price span{color:var(--muted); font-size:13px}
@@ -263,10 +289,12 @@ h2{
   min-height:42px;
 }
 
+/* Link onderaan card altijd op dezelfde plek */
 .card__body > .link{
   margin-top:auto;
 }
 
+/* Knop-stijl voor "Bekijk details" */
 .link{
   display:inline-flex; align-items:center; justify-content:center;
   padding:10px 12px;
@@ -276,14 +304,13 @@ h2{
   font-weight:700;
   width:100%;
 }
-
 .link:hover{border-color: rgba(255,255,255,.22)}
 .link--brand{background: linear-gradient(135deg, rgba(74,176,255,.25), rgba(247,183,51,.22));}
 
+/* ===== Waarom ons? (features) ===== */
 .features{
   display:flex; gap:14px; flex-wrap:wrap;
 }
-
 .feature{
   flex: 1 1 220px;
   padding:16px;
@@ -291,23 +318,21 @@ h2{
   border:1px solid rgba(255,255,255,.10);
   background: rgba(255,255,255,.03);
 }
-
 .feature h3{
   margin:0 0 6px;
   font-family:"Bebas Neue";
   font-size:24px;
   letter-spacing:.5px;
 }
-
 .feature p{margin:0; color:var(--muted); font-size:14px}
 
+/* ===== Footer ===== */
 footer{
   margin-top:16px;
   padding:22px 0 30px;
   border-top:1px solid rgba(255,255,255,.10);
   background: rgba(0,0,0,.22);
 }
-
 .footer__grid{display:flex; gap:14px; flex-wrap:wrap; align-items:flex-start}
 .footer__grid > div{flex:1 1 230px}
 
@@ -317,18 +342,16 @@ footer h4{
   letter-spacing:.5px;
   font-size:20px;
 }
-
 footer p, footer li{color:var(--muted); font-size:14px}
 footer ul{margin:0; padding-left:18px}
 
+/* ===== Detailpagina layout ===== */
 .detail{
   padding:16px 0 26px;
 }
-
 .detail__grid{
   display:flex; gap:18px; flex-wrap:wrap;
 }
-
 .detail__media{
   flex: 1 1 420px;
   border-radius: var(--radius);
@@ -337,7 +360,6 @@ footer ul{margin:0; padding-left:18px}
   background: rgba(17,24,38,.45);
   box-shadow: var(--shadow);
 }
-
 .detail__media img{width:100%; height:100%; object-fit:cover; min-height:360px}
 
 .detail__info{
@@ -348,12 +370,12 @@ footer ul{margin:0; padding-left:18px}
   box-shadow: var(--shadow);
   padding:18px;
 }
-
 .detail__info h1{font-size:48px; margin-top:2px}
 .detail__meta{display:flex; gap:10px; flex-wrap:wrap; align-items:center}
 .detail__buy{display:flex; gap:10px; flex-wrap:wrap; margin-top:14px}
 .detail__buy .btn{flex:1 1 160px}
 
+/* Specs lijst op detailpagina (flex) */
 .specs{
   margin:16px 0 0;
   padding:0;
@@ -362,7 +384,6 @@ footer ul{margin:0; padding-left:18px}
   flex-wrap:wrap;
   gap:10px;
 }
-
 .specs li{
   flex: 1 1 190px;
   padding:10px 12px;
@@ -370,10 +391,10 @@ footer ul{margin:0; padding-left:18px}
   background: rgba(255,255,255,.03);
   border:1px solid rgba(255,255,255,.10);
 }
-
 .specs b{display:block; font-size:12px; text-transform:uppercase; letter-spacing:.35px; color:var(--muted)}
 .specs span{font-weight:700}
 
+/* ===== Responsive: tablet ===== */
 @media (max-width: 860px){
   h1{font-size:44px}
   .hero__grid{flex-direction:column}
@@ -383,6 +404,7 @@ footer ul{margin:0; padding-left:18px}
   .detail__media img{min-height:280px}
 }
 
+/* ===== Responsive: mobiel ===== */
 @media (max-width: 520px){
   nav ul{gap:8px}
   nav a{padding:9px 10px}
@@ -391,6 +413,7 @@ footer ul{margin:0; padding-left:18px}
   .detail__info h1{font-size:40px}
 }
 
+/* ===== Accessibility: minder animatie ===== */
 @media (prefers-reduced-motion: reduce){
   *{scroll-behavior:auto}
   .card__media img{transition:none}
