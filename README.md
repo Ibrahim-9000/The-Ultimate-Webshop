@@ -16,10 +16,10 @@ Dit is enkel front-end en werkt zonder echte database.
 - w3schools
 - Chat gpt
     * voor ideeën en inspiratie voor de website
-    *voor uitleg over HTML en CSS
-    *kleine optimalisaties en foutoplossing
-    *styling-ideeën (kleurenthema’s)
-    *flexbox layout van de hero
+    * voor uitleg over HTML en CSS
+    * kleine optimalisaties en foutoplossing
+    * styling-ideeën (kleurenthema’s)
+    * flexbox layout van de hero
 
 Plan van aanpak en timing
 
